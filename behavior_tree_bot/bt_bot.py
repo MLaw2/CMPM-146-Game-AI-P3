@@ -18,6 +18,23 @@ from behavior_tree_bot.bt_nodes import Selector, Sequence, Action, Check
 
 from planet_wars import PlanetWars, finish_turn
 
+"""
+Basic theory: More ships = good
+More planets controlled = more ships
+Define an early strategy, and then maybe pivot to a mid/late game strategy 
+EARLY:
+Find the lowest cost neutral planets (that aren't too far away)
+Capture the planet with ships when possible, move on to another planet
+Once we have enough neutral planets, (maybe like 10, or a percentage of the total #) initiate MidGame
+MID:
+Redistribution - If one planet has more resources than the next biggest planet, redistribute to either
+A: a planet with not many resources
+B: a planet that is closer to an enemy planet
+Send in small increments (frequently)
+Might also want to maintain a minimum for when this behavior starts(maybe like 100+)
+Attack - Overwhelm or Siege
+Overwhelm: Send one big group to a planet
+"""
 
 # You have to improve this tree or create an entire new one that is capable
 # of winning against all the 5 opponent bots
