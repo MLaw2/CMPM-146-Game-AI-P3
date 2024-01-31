@@ -33,7 +33,11 @@ def finish_turn():
     stdout.flush()
 
 
-Fleet = namedtuple('Fleet', ['owner', 'num_ships', 'source_planet', 'destination_planet', 'total_trip_length',
+Fleet = namedtuple('Fleet', ['owner',
+                             'num_ships',
+                             'source_planet',
+                             'destination_planet',
+                             'total_trip_length',
                              'turns_remaining'])
 
 Planet = namedtuple('Planet', ['ID', 'x', 'y', 'owner', 'num_ships', 'growth_rate'])
