@@ -66,6 +66,7 @@ def setup_behavior_tree():
     root.child_nodes = [destroy_enemy, offensive_plan, build_economy]
 
     logging.info('\n' + root.tree_to_string())
+    print(root.tree_to_string())
     return root
 
 # You don't need to change this function
